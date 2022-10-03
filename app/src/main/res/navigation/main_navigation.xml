@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/fragment_product_list">
+    <fragment
+        android:id="@+id/fragment_product_list"
+        android:name="com.assignment.products.presentation.productlist.ProductListFragment"
+        android:label="Products"
+        tools:layout="@layout/fragment_product_list">
+        <action
+            android:id="@+id/action_product_list_to_detail"
+            app:destination="@id/fragment_product_detail" />
+
+        <action
+            android:id="@+id/action_product_list_to_wishlist"
+            app:destination="@id/fragment_wishlist" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_product_detail"
+        android:name="com.assignment.products.presentation.productdetail.ProductDetailFragment"
+        android:label="Product Detail"
+        tools:layout="@layout/fragment_product_detail">
+
+        <argument
+            android:name="product"
+            app:argType="com.assignment.products.data.entity.Product" />
+
+        <action
+            android:id="@+id/action_product_detail_to_wishlist"
+            app:destination="@id/fragment_wishlist" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_wishlist"
+        android:name="com.assignment.products.presentation.wishlist.WishlistFragment"
+        android:label="fragment_wishlist"
+        tools:layout="@layout/fragment_wishlist" />
+
+
+</navigation>

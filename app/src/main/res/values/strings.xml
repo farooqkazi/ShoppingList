@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ProductList</string>
+    <string name="image_no_data">Image No Data</string>
+    <string name="no_products">No Products</string>
+    <string name="retry">Retry</string>
+    <string name="no_internet_check_your_connection_and_try_again">No Internet! Check your connection and try again</string>
+    <string name="some_thing_went_wrong">Some thing went wrong!</string>
+    <string name="no_internet_image">No Internet Image</string>
+    <string name="product_image_description">Product Image</string>
+    <string name="new_in">NEW IN</string>
+    <string name="price_with_currency">%1d %2s</string>
+    <string name="add_to_bag">ADD TO BAG</string>
+    <string name="remove">Remove</string>
+    <string name="wishlist_title">WISHLIST (%d)</string>
+
+</resources>

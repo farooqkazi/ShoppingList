@@ -1,0 +1,90 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:paddingVertical="32dp">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:contentDescription="@string/product_image_description"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_placeholder"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_brand"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/text_title"
+        app:layout_constraintTop_toTopOf="@id/image"
+        app:layout_constraintStart_toEndOf="@id/image"
+        tools:text="PIERRE HARDY" />
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/text_subtitle"
+        app:layout_constraintTop_toBottomOf="@+id/text_brand"
+        app:layout_constraintStart_toEndOf="@id/image"
+        tools:text="Slider Sneakers" />
+
+    <TextView
+        android:id="@+id/text_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/text_subtitle"
+        app:layout_constraintTop_toBottomOf="@+id/text_name"
+        app:layout_constraintStart_toEndOf="@id/image"
+        tools:text="300 AED" />
+
+    <TextView
+        android:id="@+id/text_original_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:alpha="0.6"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/text_subtitle"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_price"
+        app:layout_constraintStart_toEndOf="@id/text_price"
+        tools:text="300 AED" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:text="@string/remove"
+        android:textColor="@color/text_title"
+        android:drawablePadding="8dp"
+        android:gravity="center"
+        app:drawableStartCompat="@drawable/ic_delete"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
