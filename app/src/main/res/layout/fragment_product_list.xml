@@ -10,21 +10,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
+        android:elevation="8dp"
         android:paddingVertical="24dp"
         app:layout_constraintTop_toTopOf="parent"
         app:title="@string/new_in"
         app:titleCentered="true"
-        app:titleTextColor="@color/black"
-        android:elevation="8dp">
+        app:titleTextColor="@color/black">
+
         <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/toolbar_wishlist_icon"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:id="@+id/toolbar_wishlist_icon"
+            android:layout_gravity="end|center_vertical"
+            android:foreground="?actionBarItemBackground"
             android:padding="8dp"
             android:scaleType="centerCrop"
-            android:foreground="?actionBarItemBackground"
-            android:src="@drawable/ic_bookmark_border"
-            android:layout_gravity="end|center_vertical"/>
+            android:src="@drawable/ic_bookmark_border" />
     </com.google.android.material.appbar.MaterialToolbar>
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -37,16 +38,16 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:background="@color/grey_light">
+            android:background="@color/grey_light"
+            android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                app:spanCount="2"
-                app:layout_constraintBottom_toBottomOf="parent" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:spanCount="2" />
 
             <include
                 android:id="@+id/emptyLayout"
