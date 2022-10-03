@@ -96,5 +96,5 @@ val product4 = Product(
     "Slider Sneakers",
     2580,
     3000,
-    listOf("NEW","SALE")
+    listOf("NEW", "SALE")
 )

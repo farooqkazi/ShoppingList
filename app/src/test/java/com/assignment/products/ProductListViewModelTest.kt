@@ -18,7 +18,6 @@ import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
-import java.lang.Exception
 
 @OptIn(ExperimentalCoroutinesApi::class)
 class ProductListViewModelTest {
