@@ -3,10 +3,8 @@ package com.assignment.products.presentation.wishlist
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.assignment.products.data.entity.Product
-import com.assignment.products.domain.wishproducts.AddWishlistProductUseCase
 import com.assignment.products.domain.wishproducts.LoadWishlistProductsUseCase
 import com.assignment.products.domain.wishproducts.RemoveWishlistProductUseCase
-import com.assignment.products.presentation.productlist.ProductListViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -17,7 +15,7 @@ import javax.inject.Inject
 class WishlistProductViewModel @Inject constructor(
     private val removeWishlistProductUseCase: RemoveWishlistProductUseCase,
     private val loadWishlistProductsUseCase: LoadWishlistProductsUseCase,
-): ViewModel(){
+) : ViewModel() {
 
     private val _products = MutableStateFlow<List<Product>>(emptyList())
     val products: StateFlow<List<Product>>

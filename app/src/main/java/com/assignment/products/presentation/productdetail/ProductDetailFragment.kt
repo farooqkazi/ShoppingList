@@ -13,7 +13,8 @@ import com.assignment.products.R
 import com.assignment.products.data.entity.Product
 import com.assignment.products.databinding.FragmentProductDetailBinding
 import com.assignment.products.presentation.common.viewBinding
-import com.assignment.products.presentation.productdetail.ProductDetailViewModel.UiState.*
+import com.assignment.products.presentation.productdetail.ProductDetailViewModel.UiState.Loading
+import com.assignment.products.presentation.productdetail.ProductDetailViewModel.UiState.Success
 import com.bumptech.glide.Glide
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch

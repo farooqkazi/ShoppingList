@@ -1,11 +1,8 @@
 package com.assignment.products.presentation.wishlist
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.core.graphics.drawable.DrawableCompat
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
@@ -14,11 +11,8 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.assignment.products.R
 import com.assignment.products.data.entity.Product
-import com.assignment.products.databinding.FragmentProductListBinding
 import com.assignment.products.databinding.FragmentWishlistBinding
-import com.assignment.products.presentation.common.EmptyStatePresenter
 import com.assignment.products.presentation.common.viewBinding
-import com.assignment.products.presentation.productlist.ProductListViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -33,6 +27,7 @@ class WishlistFragment : Fragment(R.layout.fragment_wishlist), (Product) -> Unit
         super.onCreate(savedInstanceState)
         adapter = WishlistAdapter(this)
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         with(binding) {
@@ -40,7 +35,7 @@ class WishlistFragment : Fragment(R.layout.fragment_wishlist), (Product) -> Unit
                 requireContext(), LinearLayoutManager.VERTICAL
             )
             recyclerView.addItemDecoration(dividerItemDecoration)
-                recyclerView.adapter = adapter
+            recyclerView.adapter = adapter
             recyclerView.setHasFixedSize(true)
             toolbarCloseIcon.setOnClickListener {
                 findNavController().navigateUp()
@@ -57,7 +52,7 @@ class WishlistFragment : Fragment(R.layout.fragment_wishlist), (Product) -> Unit
     }
 
     private fun updateToolbarTitle(count: Int) {
-       binding.toolbar.title = getString(R.string.wishlist_title, count)
+        binding.toolbar.title = getString(R.string.wishlist_title, count)
 
     }
 

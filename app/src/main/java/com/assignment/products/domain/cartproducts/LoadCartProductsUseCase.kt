@@ -3,7 +3,6 @@ package com.assignment.products.domain.cartproducts
 import com.assignment.products.data.entity.Product
 import com.assignment.products.di.DefaultDispatcher
 import com.assignment.products.domain.SuspendUseCase
-import com.assignment.products.domain.products.ProductsRepository
 import kotlinx.coroutines.CoroutineDispatcher
 import javax.inject.Inject
 

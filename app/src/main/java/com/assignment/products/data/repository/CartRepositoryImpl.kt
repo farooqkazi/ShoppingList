@@ -5,7 +5,7 @@ import com.assignment.products.data.local.cartProducts
 import com.assignment.products.domain.cartproducts.CartRepository
 import javax.inject.Inject
 
-class CartRepositoryImpl @Inject constructor(): CartRepository {
+class CartRepositoryImpl @Inject constructor() : CartRepository {
     override suspend fun getCartProducts(): List<Product> {
         return cartProducts
     }

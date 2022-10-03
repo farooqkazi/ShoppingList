@@ -5,7 +5,7 @@ import com.assignment.products.data.local.wishlistProducts
 import com.assignment.products.domain.wishproducts.WishlistRepository
 import javax.inject.Inject
 
-class WishlistRepositoryImpl @Inject constructor(): WishlistRepository {
+class WishlistRepositoryImpl @Inject constructor() : WishlistRepository {
     override suspend fun getWishlistProducts(): List<Product> {
         return wishlistProducts
     }

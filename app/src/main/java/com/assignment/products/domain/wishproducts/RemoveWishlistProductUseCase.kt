@@ -6,7 +6,7 @@ import com.assignment.products.domain.SuspendUseCase
 import kotlinx.coroutines.CoroutineDispatcher
 import javax.inject.Inject
 
-class RemoveWishlistProductUseCase  @Inject constructor(
+class RemoveWishlistProductUseCase @Inject constructor(
     @DefaultDispatcher private val dispatcher: CoroutineDispatcher,
     private val wishListRepository: WishlistRepository,
 ) : SuspendUseCase<Product, Unit>(dispatcher) {

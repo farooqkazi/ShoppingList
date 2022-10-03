@@ -2,9 +2,9 @@ package com.assignment.products.domain.products
 
 import com.assignment.products.data.entity.Product
 import com.assignment.products.di.DefaultDispatcher
-import kotlinx.coroutines.CoroutineDispatcher
 import com.assignment.products.domain.SuspendUseCase
 import com.assignment.products.domain.wishproducts.WishlistRepository
+import kotlinx.coroutines.CoroutineDispatcher
 import javax.inject.Inject
 
 class LoadAllProductsUseCase @Inject constructor(
